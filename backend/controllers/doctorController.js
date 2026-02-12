@@ -1,4 +1,4 @@
-import Doctor from '../models/Doctor.js';
+import Doctor from '../models/doctor.js';
 
 // Register Doctor
 export const registerDoctor = async (req, res) => {
