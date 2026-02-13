@@ -7,7 +7,7 @@ const initialState = {
 
 export const registerUser = createAsyncThunk('/auth/register', async (formData) => {
     console.log("hello")
-    const response = await axios.post(`http://localhost:3000/api/patient/register`,
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/patient/register`,
         formData, )
         console.log(response,"res")
     return response.data
@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk('/auth/register', async (formData) 
 
 export const loginUser = createAsyncThunk('/auth/login', async (formData) => {
     console.log(formData)
-    const response = await axios.post(`http://localhost:3000/api/patient/login`,
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/patient/login`,
         formData, )
     return response.data
 })
