@@ -3,17 +3,22 @@ import mongoose from 'mongoose';
 const appointmentSchema = new mongoose.Schema({
   docId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Doctor',  // reference to Doctor model
+    ref: 'Doctor',
     required: true,
   },
   patientId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Patient',  // reference to Patient model
+    ref: 'Patient',
     required: true,
   },
   scheduleTime: {
     type: Date,
     required: true,
+  },
+  status: {
+    type: String,
+    enum: ['scheduled', 'completed', 'cancelled'],
+    default: 'scheduled',
   },
 }, { timestamps: true });
 
