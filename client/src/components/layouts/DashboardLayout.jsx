@@ -20,7 +20,7 @@ const doctorNav = [
 
 const patientNav = [
   { path: '/dashboard/appointments', label: 'Appointments', icon: Calendar },
-  { path: '/dashboard/risk-prediction', label: 'Risk Assessment', icon: Activity },
+  // { path: '/dashboard/risk-prediction', label: 'Risk Assessment', icon: Activity },
   { path: '/dashboard/diet', label: 'Diet Plan', icon: UtensilsCrossed },
 ];
 
